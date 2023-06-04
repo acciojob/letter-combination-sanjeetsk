@@ -20,18 +20,13 @@ function letterCombinations(input_digit) {
   function generateCombinations(current, index){
 
     if(index === input_digit.length){
-      console.log(current + "***");
       combinations.push(current);
       return;
     }
 
-    console.log(current + "----");
-
     const letters = digitMap[input_digit[index]];
-    console.log(letters + "----");
 
     for(let i=0; i < letters.length; i++){
-      console.log(current + " " + letters[i]);
       generateCombinations(current + letters[i], index+1);
     }
     
